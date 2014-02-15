@@ -1,0 +1,10 @@
+<h1>Places</h1>
+
+<% @aplaces.each do |place| %>
+  <a href="<%= place_path(place) %>"><img src="<%= place.map_url %>" width="300px"/></a><br/>
+
+  <p><%= place.name %></p>
+  
+<% end %>
+
+<br/>

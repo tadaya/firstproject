@@ -1,0 +1,32 @@
+
+<%= form_for @user do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br/>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br/>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <br/>
+
+  <%= f.label :first%>
+  <%= f.text_field :first %>
+  <br/>
+
+  <%= f.label :last %>
+  <%= f.text_field :last%>
+  <br/>
+
+  <%= f.label "Date of Birth" %>
+  <%= f.date_field :birthdate %>
+  <br/>
+
+  <%= f.label :facebook_link %>
+  <%= f.url_field :facebook_link %>
+  <br/>
+
+  <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
+<% end %>
