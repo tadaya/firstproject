@@ -1,9 +1,9 @@
 Projectone::Application.routes.draw do
-  resources :places
-
-  resources :users do
-    resources :places
+  resources :places do
+    resources :taggings
   end
+
+  resources :users 
 
 
   get "/login", to: "session#new"
