@@ -22,6 +22,7 @@ class PlacesController < ApplicationController
   end
 
   def show
+    load_place
   end
 
   def edit

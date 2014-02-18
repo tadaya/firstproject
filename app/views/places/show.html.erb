@@ -1,4 +1,16 @@
+<h1><%= sayhello %></h1>
+
 <h1><%= @place.name %></h1>
+
+<h3>Tags<h3>
+
+<h2><%= tag_counts(@place.tags) %></h2>
+<% @place.tags.each do |tag| %>
+  <h3><%=  tag.tag %></h3>
+  <h3></h3>
+<%end%>
+
+
 <img src="<%= @place.map_url %>" width="300px"/>
 
-<h3><a href="/places">Places</a><h3>
+<% session[:place_id] = @place.id %>

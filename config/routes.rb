@@ -1,10 +1,10 @@
 Projectone::Application.routes.draw do
   resources :places do
-    resources :taggings, only:[:create, :new]
+    resources :taggings, only:[:create, :new, :show]
   end
 
   resources :users do 
-    resources :places, only: [:index]
+    resources :places, only: [:index, :show]
       resources :taggings, only: [:create]
   end
 

@@ -7,12 +7,6 @@ class TagsController < ApplicationController
   def index
   end
 
-  def new
-    @place = Place.find(params[:place_id])
-    @user = User.find(params[:user_id])
-    @tagging = Tagging.new
-  end
-
   def create 
   end
 

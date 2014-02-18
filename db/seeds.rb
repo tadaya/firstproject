@@ -1,24 +1,24 @@
 cool = Tag.create(
-  tag: "cool"
+  tags: "cool"
 )
 
 expensive = Tag.create(
-  tag: "expensive"
+  tags: "expensive"
 )
 
 wtf = Tag.create(
-  tag: "wtf"
+  tags: "wtf"
 )
 
 popup = Tag.create(
-  tag: "popup"
+  tags: "popup"
 )
 
 hotspot = Tag.create(
-  tag: "hotspot"
+  tags: "hotspot"
 )
 
 
 hotspot = Tag.create(
-  tag: "hipster"
+  tags: "hipster"
 )

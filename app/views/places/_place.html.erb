@@ -3,7 +3,7 @@
 <img src="<%= place.map_url %>" width="300px"/>
 <% session[:place_id] = place.id %>
 <% if logged_in? %>
-<%= binding.pry %>
-<%= link_to "Check In", place_taggings_path(place.id), method: :post %>
+<%= link_to "Check In", new_place_tagging_path(place.id), method: :get %>
+<%= link_to "Place", place_path(place.id), method: :get %>
 <% end %>
   
