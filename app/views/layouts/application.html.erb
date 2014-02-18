@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Projectone</title>
+  <title>Tunr</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<header>
+<%= link_to "Home", root_path %>
+
+<% if logged_in? %>
+  <p><%= link_to("Log Out #{current_user.first}!", "/session", method: "delete") %></p>  
+<% else %>
+  <p><%= link_to("Please Log In!","/login") %></p>
+<% end %>
+
+</header>
+
 <%= yield %>
+
+<!-- <h5>Session:</h5>
+<%= debug session.to_hash %>
+<br/> -->
 
 </body>
 </html>

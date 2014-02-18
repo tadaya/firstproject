@@ -1,1 +1,6 @@
-_form.html.erb
+<%= form_for [@place, tagging] do |f| %>
+  <%= f.label :tag %>
+  <%= f.text_field :tag %>
+
+  <%= f.submit %>
+<% end %>

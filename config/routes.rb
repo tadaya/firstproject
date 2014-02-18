@@ -1,9 +1,12 @@
 Projectone::Application.routes.draw do
   resources :places do
-    resources :taggings
+    resources :taggings, only:[:create, :new]
   end
 
-  resources :users 
+  resources :users do 
+    resources :places, only: [:index]
+      resources :taggings, only: [:create]
+  end
 
 
   get "/login", to: "session#new"
@@ -11,6 +14,5 @@ Projectone::Application.routes.draw do
   delete "/session", to: "session#destroy"
 
   root "welcome#index"
-
 
 end

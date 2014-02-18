@@ -14,7 +14,7 @@ class PlacesController < ApplicationController
     @place.long = results[1]
     @place.map_url = results[2]
     @place.save
-    redirect_to places_path
+    redirect_to places_path(@place)
   end
 
   def index

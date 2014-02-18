@@ -48,11 +48,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    # return {
-    #   email: params[:user][:email],
-    #   first_name: params[:user][:first_name]
-    # }
-
     params.require(:user).permit(:email, :first, :last, :birthdate, :facebook_link, :password, :password_confirmation)
   end
 
