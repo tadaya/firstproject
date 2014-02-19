@@ -51,3 +51,5 @@ gem 'pry-rails'
 gem 'rails_12factor'
 
 gem 'unirest'
+
+ruby "2.1.0"

@@ -87,7 +87,7 @@ class PlacesController < ApplicationController
     parameters: { 
       "height" => 200,
       "textblock" => textblock,
-      "width" => 300,
+      "width" => 200,
       "config" => "n\/a"
     }
   end

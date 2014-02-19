@@ -26,10 +26,15 @@
   background-attachment:fixed;
   display: block;
   position: static;
+  overflow: scroll;
  }
 
+  body a:link { color: white; }
+  body a:visited { color: white; }
+  body a:hover { color: white; }
+  body a:active { color: white; }
+
  header {
-  background: #A02D2D;
   z-index: auto;
   height: 8%;
   width: 100%;
@@ -38,32 +43,35 @@
  height: 8%;
  width: 100%;
  background-repeat:no-repeat;
+ position: absolute;
+ top: 0;
  }
+
 
 footer {
   background-image:url(http://cdn.twitheaders.com/wp-content/uploads/2012/10/watermarked_cover-247.jpg);
   background-size: cover;
- height: 8%;
- width: 100%;
- background-repeat:no-repeat;
- bottom: 0;
- left: 0;
- position: absolute;
+  height: 8%;
+  width: 100%;
+  background-repeat:no-repeat;
+  bottom: 0;
+  left: 0;
+  position: absolute;
 }
 
 div {
   background: white;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 80%;
   height: auto;
   overflow: scroll;
   text-align: center;
   vertical-align: middle;
-  margin-top: 0px;
-  padding-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin: auto;
+  padding: auto;
+  margin-top: 40px;
+  z-index: auto;
 }
 
 div a:link{ color: black; }
@@ -71,16 +79,27 @@ div a:visited { color: black; }
 div a:hover { color: black; }
 div a:active { color: black; }
 
+
+.head_text {
+  background: none;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  font-size: x-large;
+  font-color: white;
+  margin-top: auto;
+ }
+
+ .head_text a:link{ color: white;}
+ .head_text a:visited { color: white; }
+ .head_text a:hover { color: white; }
+ .head_text a:active { color: white; }
+
+
 .map{
 
 
 }
 
-.word_cloud {
-
-}
-
- a:link { color: white; }
- a:visited { color: white; }
- a:hover { color: white; }
- a:active { color: white; }

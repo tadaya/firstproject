@@ -19,7 +19,6 @@ development:
   encoding: unicode
   database: projectone
   pool: 5
-  username: taidaadaya
   password:
   host: localhost
 
@@ -57,5 +56,4 @@ production:
   encoding: unicode
   database: projectone_production
   pool: 5
-  username: projectone
   password:
