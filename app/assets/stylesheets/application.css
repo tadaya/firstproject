@@ -21,24 +21,33 @@
   color: #000;
   height: 100%;
   width: 100%;
-   background-image:url(http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg);
+  background-image:url(http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   display: block;
   position: static;
  }
 
  header {
-  background: white;
+  background: #A02D2D;
   z-index: auto;
   height: 8%;
   width: 100%;
+  background-image:url(http://rack.2.mshcdn.com/media/ZgkyMDEyLzEyLzA0L2ExL3lvdXJjb2NrdGFpLmN6aC5qcGcKcAl0aHVtYgkxMjAweDYyNyMKZQlqcGc/00e85573/124/your-cocktail-is-served-ordering-drinks-is-hassle-free-with-coaster-app-99d290685a.jpg);
+  background-size: cover;
+ height: 8%;
+ width: 100%;
+ background-repeat:no-repeat;
  }
 
 footer {
- background: white;
- display: block;
+  background-image:url(http://cdn.twitheaders.com/wp-content/uploads/2012/10/watermarked_cover-247.jpg);
+  background-size: cover;
  height: 8%;
  width: 100%;
+ background-repeat:no-repeat;
  bottom: 0;
+ left: 0;
  position: absolute;
 }
 
@@ -47,9 +56,31 @@ div {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+  height: auto;
+  overflow: scroll;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+div a:link{ color: black; }
+div a:visited { color: black; }
+div a:hover { color: black; }
+div a:active { color: black; }
+
+.map{
+
+
+}
+
+.word_cloud {
+
 }
 
  a:link { color: white; }
- a:visited { color: #009; }
- a:hover { color: #06f; }
- a:active { color: #0cf; }
+ a:visited { color: white; }
+ a:hover { color: white; }
+ a:active { color: white; }

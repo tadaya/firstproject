@@ -1,9 +1,10 @@
-
-<h1><%= place.name %></h1>
+<div>
+<h1><%= link_to "#{place.name}", place_path(place.id), method: :get %></h1>
 <img src="<%= place.map_url %>" width="300px"/>
 <% session[:place_id] = place.id %>
 <% if logged_in? %>
+<h2>
 <%= link_to "Check In", new_place_tagging_path(place.id), method: :get %>
-<%= link_to "#{place.name}", place_path(place.id), method: :get %>
+</h2>
 <% end %>
-  
+</div>

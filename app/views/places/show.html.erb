@@ -5,9 +5,13 @@
 
 <h2><%= tag_counts(@place.tags) %></h2>
 
-
+<div class = "map">
 <img src="<%= @place.map_url %>" width="300px"/>
+</div>
+
+<div class = "word_cloud">
 <img src="<%= @response.body["url"] %>" width="300px"/>
+</div>
 
 <% session[:place_id] = @place.id %>
 </div>

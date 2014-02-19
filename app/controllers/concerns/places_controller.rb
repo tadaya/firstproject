@@ -7,14 +7,20 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new(place_params)
-    results = map(@place.name)
-    @place.name = results[3]
-    @place.lat = results[0]
-    @place.long = results[1]
-    @place.map_url = results[2]
-    @place.save
-    redirect_to places_path(@place)
+    place_names = Place.all.map{ |place| place.name}
+    if place_names.include?(place_params[:name])
+      @place = Place.find_by(name: place_params[:name])
+      redirect_to places_path(@place)
+    else
+      @place = Place.new(place_params)
+      results = map(@place.name)
+      @place.name = results[3]
+      @place.lat = results[0]
+      @place.long = results[1]
+      @place.map_url = results[2]
+      @place.save
+      redirect_to places_path(@place)
+    end
   end
 
   def index
@@ -31,7 +37,6 @@ class PlacesController < ApplicationController
       tag_string = tag_string + "#{tag_name} "
     end
     @response = word_cloud(tag_string)
-    binding.pry
   end
 
   def edit
@@ -61,7 +66,7 @@ class PlacesController < ApplicationController
       lat = from_google["results"][0]["geometry"]["location"]["lat"]
       lng = from_google["results"][0]["geometry"]["location"]["lng"]
       name = from_google["results"][0]["name"]
-      map_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=15&size=400x400&sensor=false"
+      map_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=18&size=400x400&sensor=false"
       map = HTTParty.get(map_url)
       results = []
       results << lat
