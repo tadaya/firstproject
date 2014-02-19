@@ -1,4 +1,10 @@
-<h2>Welcome <%= @user.first %>!</h2>
+<h2> Welcome <%= @user.first %>!</h2>
+<h2> My places <h2>
+<% places = user_places(@user.places) %>
+<% places.each do |place| %>
+  <h3> <%= link_to "#{place.name}", place_path(place.id), method: :get %></h3>
+<% end %>
+
 
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 

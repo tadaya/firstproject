@@ -47,3 +47,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'debugger', group: [:development, :test]
 
 gem 'pry-rails'
+
+gem 'rails_12factor'
+
+gem 'unirest'

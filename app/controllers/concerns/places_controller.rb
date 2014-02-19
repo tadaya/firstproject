@@ -23,6 +23,15 @@ class PlacesController < ApplicationController
 
   def show
     load_place
+    tags = @place.tags
+    tag_names = tags.map{ |tag| tag.tag_word }
+    unique_tags = tag_names.uniq
+    tag_string = ""
+    unique_tags.map do |tag_name|
+      tag_string = tag_string + "#{tag_name} "
+    end
+    @response = word_cloud(tag_string)
+    binding.pry
   end
 
   def edit
@@ -60,5 +69,21 @@ class PlacesController < ApplicationController
       results << map_url
       results << name
       return results
+  end
+
+  def word_cloud(textblock)
+
+    response = Unirest::post "https://gatheringpoint-word-cloud-maker.p.mashape.com/index.php", 
+    
+    headers: { 
+      "X-Mashape-Authorization" => "kjrsm22vKrhzPFTHnGzCYHSFbUo3BpNw"
+    },
+
+    parameters: { 
+      "height" => 200,
+      "textblock" => textblock,
+      "width" => 300,
+      "config" => "n\/a"
+    }
   end
 end

@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tunr</title>
+
+<div>
+  <title>Project One</title>
+  <%= stylesheet_link_tag "normalize" %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+</div>
+
 
 <header>
 <%= link_to "Home", root_path %>
@@ -19,11 +24,14 @@
 
 </header>
 
+
+
 <%= yield %>
 
-<!-- <h5>Session:</h5>
-<%= debug session.to_hash %>
-<br/> -->
+
+<footer>
+  <h4> <%= link_to("About", "/") %></h4>
+</footer>
 
 </body>
 </html>

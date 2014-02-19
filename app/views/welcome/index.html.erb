@@ -1,6 +1,15 @@
-<h1> Welcome to Project 1 <h1>
 
+<div>
+<% if !logged_in?  %>
+  <h1> Welcome. Check out what's going on in your city!<h1>
   <p><%= link_to "Join us!", new_user_path %></p>
   <p><%= link_to "Login", "/login" %></p>
-
+  <% else %>
+  <h1> Welcome <%= User.find_by(id: session[:user_id]).first %>
   <p><%= link_to "Check out places", "/places" %></p>
+  <p> <%= link_to "Add new place", "/places/new" %>
+<% end %>
+</div>
+
+
+

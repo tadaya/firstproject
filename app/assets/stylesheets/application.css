@@ -11,3 +11,45 @@
  *= require_self
  *= require_tree .
  */
+
+@charset "utf-8";
+ 
+ html, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  color: #000;
+  height: 100%;
+  width: 100%;
+   background-image:url(http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg);
+  display: block;
+  position: static;
+ }
+
+ header {
+  background: white;
+  z-index: auto;
+  height: 8%;
+  width: 100%;
+ }
+
+footer {
+ background: white;
+ display: block;
+ height: 8%;
+ width: 100%;
+ bottom: 0;
+ position: absolute;
+}
+
+div {
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+ a:link { color: white; }
+ a:visited { color: #009; }
+ a:hover { color: #06f; }
+ a:active { color: #0cf; }

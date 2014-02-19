@@ -2,7 +2,7 @@ class TagsController < ApplicationController
 
   before_action(:load_tag, { only: [:show, :edit, :update, :destroy] })
 
-   before_action(:load_tagging, { only: [:show, :edit, :update, :destroy] })
+  before_action(:load_tagging, { only: [:show, :edit, :update, :destroy] })
 
   def index
   end
@@ -16,7 +16,7 @@ class TagsController < ApplicationController
   end
 
   def tagging_params
-    params.require(:tagging).permit(:tag, :type)
+    params.require(:tagging).permit(:tag_word, :type)
   end
 
 

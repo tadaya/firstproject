@@ -4,6 +4,6 @@
 <% session[:place_id] = place.id %>
 <% if logged_in? %>
 <%= link_to "Check In", new_place_tagging_path(place.id), method: :get %>
-<%= link_to "Place", place_path(place.id), method: :get %>
+<%= link_to "#{place.name}", place_path(place.id), method: :get %>
 <% end %>
   

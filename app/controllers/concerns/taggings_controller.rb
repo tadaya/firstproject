@@ -9,10 +9,9 @@ class TaggingsController < ApplicationController
     @place = Place.find_by(id: params[:place_id])
     @user = User.find_by(id: session[:user_id])
     @tag = Tag.new
-    @tagging = Tagging.new
-    @tag.tag = params["tagging"]["tag"]
-    binding.pry
+    @tag.tag_word = params["tagging"]["tag"]
     @tag.save
+    @tagging = Tagging.new
     @tagging.user = @user
     @tagging.place = @place
     @tagging.tag = @tag
