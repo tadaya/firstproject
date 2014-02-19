@@ -1,1 +1,22 @@
-Hello world!
+GA WDI NYC Jan 14, Project 1
+
+Overview
+
+
+
+Technologies Used
+
+Ruby 2.1.0
+Ruby on Rails 4.0.2
+PostgreSQL Database
+Authentication & Authorization from scratch using bcrypt-ruby
+Google Place API
+Google Maps API
+Word Cloud Maker API
+HTTParty
+
+
+
+Backlog
+
+A full list of user stories can be found by looking at this Pivotal Tracker Project
