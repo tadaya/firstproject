@@ -2,6 +2,10 @@ GA WDI NYC Jan 14, Project 1
 
 Overview
 
+IN DEVELOPMENT
+http://tadaya.herokuapp.com/
+
+ProjectOne is an app that allows users to checkin to places and tag them with descriptors. Users can see real-time what is trending in their area without have to read long or outdated reviews.
 
 
 Technologies Used
@@ -12,7 +16,7 @@ PostgreSQL Database
 Authentication & Authorization from scratch using bcrypt-ruby
 Google Place API
 Google Maps API
-Word Cloud Maker API
+Word Cloud Maker API (Unirest Client Library)
 HTTParty
 
 User Stories:
@@ -24,5 +28,7 @@ User Stories:
 - As a user, I can log in and out
 
 Backlog
+- Improve Location Entry and Accuracy
+- Lock tags to predefined set
 
-A full list of user stories can be found by looking at this Pivotal Tracker Project
+A full list of user stories can be found by looking at this Pivotal Tracker Project (https://www.pivotaltracker.com/s/projects/1015702)
