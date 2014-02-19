@@ -15,7 +15,13 @@ Google Maps API
 Word Cloud Maker API
 HTTParty
 
-
+User Stories:
+- As a user, I can find a location so that I can review/tag it
+- As a user, I can check into place 
+- As a user, i can tag a place when I check in
+- As a user, I can browse places and see tags associated to places
+- As a user, I can add a new place
+- As a user, I can log in and out
 
 Backlog
 
