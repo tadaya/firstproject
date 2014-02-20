@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<div>
   <title>Project One</title>
   <%= stylesheet_link_tag "normalize" %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -10,32 +8,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
+
+<%= render "/shared/navbar" %>
+<div class="color-spacer"></div>
+<div class="container">
+ <%= yield %>
 </div>
-
-
-<header>
-<div class="head_text"><%= link_to "Home", root_path %>
-<% if logged_in? %>
-  <%= link_to("Log Out #{current_user.first}!", "/session", method: "delete") %> 
-<% else %>
-  <%= link_to("Please Log In!","/login") %>
-<% end %> </div>
-</header>
-
-
-<div>
-<%= yield %>
-</div>
-
-
-
-
-
 
 <footer>
   <h4> <%= link_to("About", "/") %></h4>
 </footer>
 
 </body>
-</html>
+</html> 
+
+
+
+
+
+
+
+
+
+
 

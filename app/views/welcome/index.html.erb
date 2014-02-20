@@ -5,9 +5,21 @@
   <p><%= link_to "Join us!", new_user_path %></p>
   <p><%= link_to "Login", "/login" %></p>
   <% else %>
-  <h1> Welcome <%= User.find_by(id: session[:user_id]).first %>
-  <p><%= link_to "Check out places", "/places" %></p>
-  <p> <%= link_to "Add new place", "/places/new" %>
+  <% user = User.find_by(id: session[:user_id])%>
+  <h1> Welcome <%= user.first %>
+
+<div>
+  <h1> My places <h1>
+    <ul>
+  <% places = user_places(user.places) %>
+  <% places.each do |place| %>
+     <li><%= link_to "#{place.name}", place_path(place.id), method: :get %></li>
+  <% end %>
+  </ul>
+</div>
+
+ <h1> <%= link_to "Check out places", "/places" %> </h1>
+  <h1><p> <%= link_to "Add new place", "/places/new" %> </h1>
 <% end %>
 </div>
 

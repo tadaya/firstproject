@@ -16,7 +16,7 @@ class TaggingsController < ApplicationController
     @tagging.place = @place
     @tagging.tag = @tag
     @tagging.save
-    redirect_to user_places_path(:user_id)
+    redirect_to place_path(@place)
   end
 
   private

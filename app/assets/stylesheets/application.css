@@ -1,105 +1,219 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,  
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
 
-@charset "utf-8";
- 
- html, body {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  color: #000;
-  height: 100%;
-  width: 100%;
-  background-image:url(http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg);
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  display: block;
-  position: static;
+body {
+  background-color: black;
   overflow: scroll;
- }
+}
 
-  body a:link { color: white; }
-  body a:visited { color: white; }
-  body a:hover { color: white; }
-  body a:active { color: white; }
+li {
+  list-style-type: none;
+}
 
- header {
-  z-index: auto;
-  height: 8%;
-  width: 100%;
-  background-image:url(http://rack.2.mshcdn.com/media/ZgkyMDEyLzEyLzA0L2ExL3lvdXJjb2NrdGFpLmN6aC5qcGcKcAl0aHVtYgkxMjAweDYyNyMKZQlqcGc/00e85573/124/your-cocktail-is-served-ordering-drinks-is-hassle-free-with-coaster-app-99d290685a.jpg);
-  background-size: cover;
- height: 8%;
- width: 100%;
- background-repeat:no-repeat;
- position: absolute;
- top: 0;
- }
+.container {
+  background-color: #FFF;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 48px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
 
+h1 {
+  padding: 35px 20px 20px 20px;
+  text-align: center;
+  color: #47008F;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  color: #47008F;
+}
+
+h3 {
+  padding-bottom: 20px;
+  color: #47008F;
+}
+
+h4 {
+  padding: 30px 0px 15px 0px;
+  color: #47008F;
+}
+
+.clear {
+  clear:both;
+}
+
+li {
+  padding: 3px;
+}
+
+ul.link-list  {
+  padding-bottom: 20px;
+}
+
+.link-list li {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #47008F;
+}
+
+a:hover {
+  color: #81819B;
+}
+
+button a {
+  color: #47008F;
+}
+
+button a:hover {
+  color: #81819B;
+}
+
+input[type="submit"], button {
+  color: #fff;
+  background-color: #47008F;
+  border-top: 1px solid #47008F;
+  border-left: hidden;
+  border-right: hidden;
+  border-bottom: hidden;
+  border-radius: 4px;
+  padding: 5px 10px 8px 10px;
+  margin: 15px 30px 30px 30px;
+  font-size: 16px;
+  line-height: 14px;
+  box-shadow: inset 0 -3px 0 #47008F;
+}
+
+input[type="submit"]:hover, button:hover {
+  color: #fff;
+  background-color: #81819B;
+  border-top: 1px solid #81819B;
+  border-left: hidden;
+  border-right: hidden;
+  border-bottom: hidden;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+  margin: 18px 30px 30px 30px;
+  font-size: 16px;
+  line-height: 14px;
+  box-shadow: none;
+  opacity: .7;
+}
 
 footer {
-  background-image:url(http://cdn.twitheaders.com/wp-content/uploads/2012/10/watermarked_cover-247.jpg);
+  background-image:url("sexy_lights.jpg");
   background-size: cover;
   height: 8%;
   width: 100%;
   background-repeat:no-repeat;
   bottom: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
+  z-index: 5;
 }
 
-div {
-  background: white;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  height: auto;
-  overflow: scroll;
-  text-align: center;
-  vertical-align: middle;
-  margin: auto;
-  padding: auto;
-  margin-top: 40px;
-  z-index: auto;
-}
+/****** NAV BAR ************************************/
+/****** NAV BAR ************************************/
+/****** NAV BAR ************************************/
 
-div a:link{ color: black; }
-div a:visited { color: black; }
-div a:hover { color: black; }
-div a:active { color: black; }
-
-
-.head_text {
-  background: none;
-  text-align: right;
-  position: absolute;
-  left: 0;
+.navbar {
+  background-color: black;
+  width: 100%;
   top: 0;
-  width: 30%;
-  font-size: x-large;
-  font-color: white;
-  margin-top: auto;
+  height: 45px;
+  position: fixed;
+  z-index: 15;
  }
 
- .head_text a:link{ color: white;}
- .head_text a:visited { color: white; }
- .head_text a:hover { color: white; }
- .head_text a:active { color: white; }
+ .color-spacer {
+  height: 48px;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 0 2px #666;
+  position: fixed;
+  z-index: 10;
+}
+
+.nav-left {
+  position: relative;
+  display: inline;
+  float: left;
+}
+
+.nav-left p {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  font-size : 20px;
+  vertical-align: center;
+  padding-top: 12px;
+  padding-left: 15px;
+  position: relative;
+  float: left;
+}
+
+.nav-left  p:hover {
+  color: #47008F;
+}
+
+.navbar input[type="submit"] {
+  padding: 4px 8px 7px 8px;
+  font-size: 14px;
+  line-height: 12px;
+}
+
+.navbar input[type="submit"]:hover {
+  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 12px;
+  box-shadow: none;
+}
+
+.nav-right input[type="submit"] {
+  margin: 10px 20px;
+}
+
+.nav-right input[type="submit"]:hover {
+  margin: 13px 20px;
+  opacity: 1;
+}
 
 
-.map{
+.nav-right {
+  position: relative;
+  float: right;
+}
 
+.nav-right ul {
+  padding-right: 5px;
+}
 
+.nav-right li {
+  color: #47008F;
+  display: inline-block;
+  padding-top: 14px;
+  padding-right: 8px;
+}
+
+.nav-right li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav-right li a:hover {
+  color: #47008F;
+}
+
+.nav-right li a:active {
+  color: #47008F;
 }
 

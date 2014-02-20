@@ -1,0 +1,23 @@
+<div class="navbar">
+  <div class="nav-left">
+    <%= link_to raw("<p>Where you should be right now...</p>"), root_path %>
+  </div>
+
+  <div class="nav-right">
+    <% if session[:user_id].nil? %>
+      <ul>
+        <li><%= link_to "Join us!", new_user_path %></li>
+        <li><%= link_to "Login", "/login" %></li>
+      </ul>
+    <% else %>
+      <% user = User.find(session[:user_id]) %>
+      <%= form_tag session_path, method: "delete" do %>
+        <%= submit_tag("Log out, #{ user.first }") %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+

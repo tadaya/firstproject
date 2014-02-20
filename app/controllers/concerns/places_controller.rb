@@ -47,6 +47,7 @@ class PlacesController < ApplicationController
   end
 
   def destroy
+    @place.destroy
   end
 
   private
@@ -65,8 +66,10 @@ class PlacesController < ApplicationController
       from_google = HTTParty.get(search_url)
       lat = from_google["results"][0]["geometry"]["location"]["lat"]
       lng = from_google["results"][0]["geometry"]["location"]["lng"]
+      address = from_google["results"][0]["formatted_address"]
+      address = address.gsub(" ", "+")
       name = from_google["results"][0]["name"]
-      map_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=18&size=400x400&sensor=false"
+      map_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=18&size=500x500&&markers=color:blue%7C#{lat},#{lng}&markers=size:mid&sensor=false"
       map = HTTParty.get(map_url)
       results = []
       results << lat
@@ -85,10 +88,11 @@ class PlacesController < ApplicationController
     },
 
     parameters: { 
-      "height" => 200,
+      "height" => 400,
       "textblock" => textblock,
-      "width" => 200,
+      "width" => 400,
       "config" => "n\/a"
     }
   end
+  
 end
