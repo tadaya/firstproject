@@ -14,10 +14,10 @@ class PlacesController < ApplicationController
     else
       @place = Place.new(place_params)
       results = map(@place.name)
-      @place.name = results[3]
-      @place.lat = results[0]
-      @place.long = results[1]
-      @place.map_url = results[2]
+      @place.name = results[:name]
+      @place.lat = results[:lat]
+      @place.long = results[:lng]
+      @place.map_url = results[:map_url]
       @place.save
       redirect_to places_path(@place)
     end
@@ -71,11 +71,11 @@ class PlacesController < ApplicationController
       name = from_google["results"][0]["name"]
       map_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=18&size=500x500&&markers=color:blue%7C#{lat},#{lng}&markers=size:mid&sensor=false"
       map = HTTParty.get(map_url)
-      results = []
-      results << lat
-      results << lng
-      results << map_url
-      results << name
+      results = Hash.new
+      results[:lat] = lat
+      results[:lng] = lng
+      results[:map_url] = map_url
+      results[:name] = name
       return results
   end
 

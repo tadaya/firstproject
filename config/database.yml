@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: projectone_test
   pool: 5
-  username: projectone
+  username: taidaadaya
   password:
 
 production:

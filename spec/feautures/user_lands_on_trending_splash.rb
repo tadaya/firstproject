@@ -1,0 +1,1 @@
+user_lands_on_trending_splash.rb

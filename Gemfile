@@ -53,3 +53,13 @@ gem 'rails_12factor'
 gem 'unirest'
 
 ruby "2.1.0"
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end
