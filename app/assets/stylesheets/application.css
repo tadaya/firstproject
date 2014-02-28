@@ -1,7 +1,30 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require normalize
+ *= require_self
+ */
+
+/*********************** RESET AND MARK-UP ***/
 html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,  
-pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+pre, form, fieldset, table, th, td, span { 
+  margin: 0; 
+  padding: 0; 
+  border: 1px solid red;
+  font-family: Helvetica, sans-serif;
+}
 
 body {
+}
+
+.page_wrapper {
   background-color: black;
   overflow: scroll;
 }
@@ -10,16 +33,60 @@ li {
   list-style-type: none;
 }
 
-.container {
+.main {
   background-color: #FFF;
   width: 80%;
   margin: 0 auto;
   padding-top: 48px;
   padding-bottom: 100px;
   position: relative;
-  z-index: 5;
   text-align: center;
 }
+
+div.place {
+  border: 5px solid green;
+  margin: 1em 1em 1em 1em;
+
+}
+
+.map_photo {
+  background: url(<%= link_to "#{place.map_url}" %>);
+  border-radius: 50%;
+  height: 18em;
+  width: 18em;
+  display: inline-block;
+}
+
+.map_photo span {
+  color: black;
+  width: 50%;
+  display: inline;
+  vertical-align: -8em;
+}
+
+div.place_tags {
+  display: inline;
+  vertical-align: -8em;
+}
+
+.place_tags span {
+  color: black;
+  white-space: nowrap;
+}
+
+div.place_name {
+  width: 100%;
+}
+
+span.place_info {
+
+}
+
+div.check_in {
+
+}
+
+
 
 h1 {
   padding: 35px 20px 20px 20px;

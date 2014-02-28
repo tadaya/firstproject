@@ -8,19 +8,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <div class="page_wrapper">
+  <%= render "/shared/navbar" %>
+  <div class="color-spacer"></div>
+  <div class="main">
+    <%= yield %>
+  </div>
 
+  <footer>
+    <h4> <%= link_to("About", "/") %></h4>
+  </footer>
 
-
-<%= render "/shared/navbar" %>
-<div class="color-spacer"></div>
-<div class="container">
- <%= yield %>
-</div>
-
-<footer>
-  <h4> <%= link_to("About", "/") %></h4>
-</footer>
-
+  </div>
 </body>
 </html> 
 

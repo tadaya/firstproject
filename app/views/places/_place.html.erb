@@ -1,10 +1,23 @@
-<div>
-<h1><%= link_to "#{place.name}", place_path(place.id), method: :get %></h1>
-<img src="<%= place.map_url %>" width="300px"/>
-<% session[:place_id] = place.id %>
+<div class ="place">
+<div class="place_name">
+  <span class="place_name_text">
+  <%= link_to "#{place.name}", place_path(place.id), method: :get %>
+  </span>
+</div>
+
+<div class="map_photo">
+  <span>Circle Map Picture from Internet</span>
+</div>
+
+<div class="place_tags">
+  <span> #Hashtags #Hashtags </span>
+</div>
+
 <% if logged_in? %>
-<h2>
+<div class="check_in">
+  <span class="check_in_text">
 <%= link_to "Check In", new_place_tagging_path(place.id), method: :get %>
-</h2>
+  </span>
+</div>
 <% end %>
 </div>
